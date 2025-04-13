@@ -7,4 +7,4 @@ if [ -z "$experiment_epochs" ]; then
     exit 1
 fi
 
-python3 -c "from run import run; run('training.LunaTrainingApp', '--epochs', '$experiment_epochs')"
+python3 -c "import sys; sys.path.append('../'); from run import run; run('training.LunaTrainingApp', '--epochs', '$experiment_epochs')"
