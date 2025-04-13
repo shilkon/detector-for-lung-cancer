@@ -1,0 +1,28 @@
+services:
+  medicalnn:
+    build:
+      args:
+        - KEY
+
+    image: medicalnn
+    ports:
+      - 8888:8888
+    stdin_open: true
+    tty: true
+
+    shm_size: 30gb
+    volumes:
+      - $PARTICIPANT_DATA_PATH:/usr/src/app/data/
+
+    environment:
+      - PARTICIPANT_DATA_PATH=/usr/src/app/data/
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+
+    command: jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
