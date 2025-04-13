@@ -14,11 +14,11 @@
     - Улучшение процесса обучения с помощью метрик и дополнений.
 3) Разработка архитектуры и детальное проектирование доступны по ссылке\
     https://drive.google.com/file/d/1vkO2NkZX6lx-bMfv_RzRBXSECjyeesm4/view?usp=sharing
-    ![alt text](Medical_neural_network/images/c4model.png)
+    ![alt text](Detector_for_lung_cancer/images/c4model.png)
 4) В качестве юнит-тестов представлена визуализация данных в ноутбуках explore_data и augmented_explore_data. Фрагмент визуализации:
-    ![alt text](Medical_neural_network/images/explored_data.png)
+    ![alt text](Detector_for_lung_cancer/images/explored_data.png)
 5) В качестве интеграционного тестирования представлен ноутбук run_everything_augmented, при выполнении которого были получены данные в runs/mnn/. Результаты тестирования представляют собой метрики для TensorBoard. Фрагмент визуализации метрик с помощью TensorBoard:\
-    ![alt text](Medical_neural_network/images/tensorboard.png)
+    ![alt text](Detector_for_lung_cancer/images/tensorboard.png)
 6) Сборка проекта есть в двух вариантах
    - Docker \
    Сборка образа: `docker-compose build --build-arg KEY="cuda"`\
@@ -38,7 +38,7 @@
         Для того чтобы произвести этапы поочередно, можно запустить все одной командой make.
 
     Датасет LUNA должен быть скачан (все subset* полностью или частично) в папку luna как на изображении:
-   ![alt text](Medical_neural_network/images/dir.png)\
+   ![alt text](Detector_for_lung_cancer/images/dir.png)\
    Путь до папки luna должен храниться в переменой окружения PARTICIPANT_DATA_PATH.\
    Например, PARTICIPANT_DATA_PATH=D:/MedicalNNData/
 
